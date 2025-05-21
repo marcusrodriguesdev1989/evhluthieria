@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>EVH-Luthieria</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <a href="/index.html" style="text-decoration:none; color:inherit;">
+            <h1><span>EVH</span> Luthieria</h1>
+          </a>
+        </div>
+        <nav class="header__nav-list-desktop">
+          <ul class="header__nav-list">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="#quemsomos">Quem Somos</a></li>
+            <li class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Produtos <span class="arrow">&#9662;</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="produtos-novos.html">Novos</a></li>
+                <li><a href="produtos-usados.html">Usados</a></li>
+                <li><a href="produtos-acessorios.html">Acessórios</a></li>
+              </ul>
+            </li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+          </ul>
+        </nav>
+        <div class="header__icons header__icons--desktop">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <svg width="24" height="24" fill="currentColor">
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+              />
+              <rect
+                x="8"
+                y="8"
+                width="8"
+                height="8"
+                rx="2"
+                fill="currentColor"
+              />
+              <circle cx="16" cy="8" r="1" fill="#fff" />
+            </svg>
+          </a>
+          <a href="https://wa.me/" target="_blank" aria-label="WhatsApp">
+            <svg width="24" height="24" fill="currentColor">
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+              />
+              <path
+                d="M8 12c1.5 2 4.5 2 6 0"
+                stroke="#fff"
+                stroke-width="2"
+                fill="none"
+              />
+            </svg>
+          </a>
+        </div>
+        <button class="header__menu-btn" id="menuBtn" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header__dropdown-mobile" id="dropdownMobile">
+          <ul class="header__nav-list">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="#quemsomos">Quem Somos</a></li>
+            <li class="dropdown-mobile">
+              <button
+                class="dropdown-toggle-mobile"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Produtos <span class="arrow">&#9662;</span>
+              </button>
+              <ul class="dropdown-menu-mobile">
+                <li><a href="produtos-novos.html">Novos</a></li>
+                <li><a href="produtos-usados.html">Usados</a></li>
+                <li><a href="produtos-acessorios.html">Acessórios</a></li>
+              </ul>
+            </li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+          </ul>
+          <div class="header__icons header__icons--mobile">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <svg width="24" height="24" fill="currentColor">
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <rect
+                  x="8"
+                  y="8"
+                  width="8"
+                  height="8"
+                  rx="2"
+                  fill="currentColor"
+                />
+                <circle cx="16" cy="8" r="1" fill="#fff" />
+              </svg>
+            </a>
+            <a href="https://wa.me/" target="_blank" aria-label="WhatsApp">
+              <svg width="24" height="24" fill="currentColor">
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <path
+                  d="M8 12c1.5 2 4.5 2 6 0"
+                  stroke="#fff"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main style="margin-top: 90px">
+      <section>
+        <h1
+          style="
+            text-align: center;
+            margin-top: 2rem;
+            font-family: 'Bree Serif', serif;
+          "
+        >
+          Tipos de Regulagens
+        </h1>
+        <div class="regulagens-cards-container">
+          <div class="regulagens-card">
+            <h2>Setup Completo</h2>
+            <h3>R$220*</h3>
+            <p>
+              Ideal para quem busca máxima performance. Inclui higienização
+              completa, limpeza das peças e componentes elétricos, revisão de
+              soldas, retífica de trastes, ajustes do tensor, ponte e pestana,
+              hidratação da escala (quando aplicável) e polimento com ceras
+              especiais. Acabamento profissional garantido.
+            </p>
+            <p class="regulagens-observacao">
+              *Valores sujeitos a variações conforme o instrumento.
+            </p>
+            <a
+              href="https://wa.me/SEUNUMERO"
+              target="_blank"
+              class="regulagens-cta"
+              >Agendar via WhatsApp</a
+            >
+          </div>
+          <div class="regulagens-card">
+            <h2>Setup Simples</h2>
+            <h3>R$150*</h3>
+            <p>
+              Uma regulagem básica e eficaz. Troca de cordas, limpeza
+              superficial, hidratação da escala, ajuste do tensor e regulagem da
+              ponte (altura e oitavas). Ideal para manutenção periódica e boa
+              tocabilidade.
+            </p>
+            <p class="regulagens-observacao">
+              *Valores sujeitos a variações conforme o instrumento.
+            </p>
+            <a
+              href="https://wa.me/SEUNUMERO"
+              target="_blank"
+              class="regulagens-cta"
+              >Agendar via WhatsApp</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
