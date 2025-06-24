@@ -179,6 +179,7 @@ body {
   font-size: 1.1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: background 0.2s, transform 0.2s;
+  margin-top: 2.2rem; /* Aumente esse valor para mais espaço */
 }
 .banner__cta:hover {
   background: #128c7e;
@@ -973,27 +974,36 @@ section.servicos {
 }
 .produtos-section {
   display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
   justify-content: center;
-  align-items: flex-start;
-  padding: 0.5rem 0 1rem 0;
-  background: #fafafa;
-  min-height: 350px;
+  align-items: stretch;
+  margin-bottom: 3rem;
 }
+
 .produto-card {
-  background: rgba(255, 255, 255, 0.93);
-  border-radius: 22px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
-  padding: 2.2rem 2rem 2rem 2rem;
-  max-width: 420px;
-  width: 100%;
+  flex: 1 1 320px;
+  max-width: 350px;
+  min-width: 280px;
+  margin: 0;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1.5px 4px rgba(0,0,0,0.07);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.2rem;
-  transform: scale(0.7);
-  transform-origin: top center;
-  margin: 0 auto;
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  transition: transform 0.18s, box-shadow 0.18s;
+  border: 1.5px solid #ececec;
+  /* Mantém o layout flexível para carousel e info */
 }
+
+.produto-card:hover {
+  transform: translateY(-6px) scale(1.025);
+  box-shadow: 0 8px 32px rgba(230,0,0,0.13), 0 2px 8px rgba(0,0,0,0.10);
+  border-color: #e60000;
+}
+
 .produto-carousel {
   width: 100%;
   display: flex;
@@ -1001,28 +1011,9 @@ section.servicos {
   justify-content: center;
   gap: 0.5rem;
   position: relative;
+  margin-bottom: 1.2rem;
 }
-.carousel-produto-btn {
-  background: #191919;
-  border: 2px solid #e60000;
-  color: #fff;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  font-size: 1.7rem;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
-.carousel-produto-btn:hover {
-  background: #e60000;
-  color: #fff;
-  border-color: #e60000;
-  box-shadow: 0 4px 16px #e6000033;
-}
+
 .carousel-produto-track-wrapper {
   overflow: hidden;
   width: 260px;
@@ -1047,33 +1038,43 @@ section.servicos {
   background: #222;
   border: 1.5px solid #232323;
   user-select: none;
-  pointer-events: none;
   display: block;
   margin: 0 auto;
+  cursor: pointer;
 }
+
 .produto-info {
+  background: #faf9f9;
+  border-radius: 12px;
+  padding: 1.1rem 0.7rem 0.7rem 0.7rem;
   width: 100%;
+  box-shadow: 0 1px 6px rgba(230,0,0,0.03);
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.2rem;
 }
+
 .produto-nome {
-  color: #181818;
-  font-size: 1.25rem;
+  color: #e60000;
+  font-size: 1.18rem;
   font-family: "Bree Serif", serif;
   text-align: center;
   margin-bottom: 0.5rem;
   letter-spacing: 0.5px;
 }
+
 .produto-disponibilidade {
-  color: #e60000;
-  font-size: 1.08rem;
+  color: #222;
+  font-size: 1.05rem;
   font-weight: bold;
   margin-bottom: 0.7rem;
   text-align: center;
 }
+
 .btn-produto-cta {
+  margin-top: 0.7rem;
   display: inline-block;
   background: #e60000;
   color: #fff;
@@ -1091,6 +1092,7 @@ section.servicos {
   background: #b50000;
   transform: translateY(-2px) scale(1.03);
 }
+
 @media (max-width: 600px) {
   .produto-card {
     transform: scale(0.55);
@@ -1134,41 +1136,213 @@ section.servicos {
   display: none;
   position: fixed;
   z-index: 99999;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.85);
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(53, 52, 52, 0.85);
   align-items: center;
   justify-content: center;
 }
-.modal-produto-img.open {
-  display: flex;
-}
+.modal-produto-img.open { display: flex; }
 .modal-produto-img-content {
   max-width: 70vw;
   max-height: 70vh;
   border-radius: 18px;
   background: #fff;
   padding: 0.5rem;
+  box-shadow: 0 8px 32px rgba(49, 49, 49, 0.25);
+  margin: auto;
+  display: block;
 }
 .modal-produto-close {
   position: absolute;
-  top: 32px;
-  right: 48px;
+  top: 32px; right: 48px;
   color: #fff;
   font-size: 3rem;
+  font-weight: bold;
   cursor: pointer;
   z-index: 100000;
+  transition: color 0.2s;
+}
+.modal-produto-close:hover { color: #e60000; }
+.modal-produto-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background:rgb(65, 62, 62);
+  border: 2px solid #e60000;
+  color: #fff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 100001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+}
+.modal-produto-arrow.prev { left: 32px; }
+.modal-produto-arrow.next { right: 32px; }
+.modal-produto-arrow:hover {
+  background: #e60000;
+  color: #fff;
+  border-color: #e60000;
+  box-shadow: 0 4px 16px #e6000033;
 }
 @media (max-width: 700px) {
-  .modal-produto-img-content {
-    max-width: 96vw;
-    max-height: 60vh;
+  .modal-produto-img-content { max-width: 96vw; max-height: 60vh; }
+  .modal-produto-close { top: 16px; right: 16px; font-size: 2.2rem; }
+  .modal-produto-arrow.prev { left: 8px; }
+  .modal-produto-arrow.next { right: 8px; }
+}
+
+.banner-dividido {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 340px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+}
+
+.banner-topo {
+  position: relative;
+  background: url('/assets/images/stripes-bg.jpg') center center/cover no-repeat;
+  color: #fff;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  text-align: center;
+}
+.banner-topo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 0;
+}
+.banner-topo > * {
+  position: relative;
+  z-index: 1;
+}
+.banner-titulo {
+  font-family: 'Bree Serif', serif;
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.banner-subtitulo {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.banner-base {
+  position: relative;
+  background: url('/assets/images/guitar-evh.png') center center/contain no-repeat;
+  color: #222;
+  min-height: 260px; /* ajuste conforme necessário */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* centraliza verticalmente */
+  padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+  text-align: center;
+}
+.banner-base::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.78); /* menos opaco */
+  z-index: 0;
+}
+.banner-base > * {
+  position: relative;
+  z-index: 1;
+}
+
+.banner-chamada {
+  font-size: 1.15rem;
+  margin-bottom: 1.2rem;
+  color: #222;
+}
+
+.banner-cta {
+  display: inline-block;
+  background: #e60000;
+  color: #fff;
+  padding: 0.7rem 2.2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 2.2rem; /* Aumente esse valor para mais espaço */
+}
+.banner-cta:hover {
+  background: #b50000;
+  transform: scale(1.05);
+}
+
+@media (max-width: 700px) {
+  .banner-dividido {
+    min-height: 220px;
   }
-  .modal-produto-close {
-    top: 16px;
-    right: 16px;
-    font-size: 2.2rem;
+  .banner-topo, .banner-base {
+    padding: 1.2rem 0.7rem;
+  }
+  .banner-titulo {
+    font-size: 1.4rem;
+  }
+  .banner-chamada {
+    font-size: 1rem;
   }
 }
+.cadastro-container {
+      max-width: 540px;
+      margin: 3rem auto 2rem auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px #0002;
+      padding: 2.5rem 2rem 2rem 2rem;
+      text-align: center;
+    }
+    .cadastro-container h2 {
+      color: #e60000;
+      margin-bottom: 1.2rem;
+      font-size: 2rem;
+      font-family: 'Bree Serif', serif;
+    }
+    .cadastro-container p {
+      color: #222;
+      font-size: 1.13rem;
+      margin-bottom: 2.2rem;
+      line-height: 1.6;
+    }
+    .banner-cta {
+      display: inline-block;
+      background: #e60000;
+      color: #fff;
+      padding: 0.9rem 2.2rem;
+      border-radius: 30px;
+      font-size: 1.15rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      margin-top: 1.2rem;
+      box-shadow: 0 2px 8px #e6000012;
+    }
+    .banner-cta:hover {
+      background: #b50000;
+      transform: scale(1.04);
+    }
+    @media (max-width: 700px) {
+      .cadastro-container {
+        padding: 1.2rem 0.5rem 1rem 0.5rem;
+        margin: 1.2rem 0;
+      }
+      .cadastro-container h2 {
+        font-size: 1.3rem;
+      }
+    }

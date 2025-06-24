@@ -4,7 +4,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Usados | MR-Luthieria</title>
   </head>
@@ -12,76 +15,41 @@
     <header class="header">
       <div class="header__container">
         <div class="header__logo">
-          <a href="/index.html" style="text-decoration:none; color:inherit;">
+          <a href="/index.html" style="text-decoration: none; color: inherit">
             <h1><span>MR</span>Luthieria</h1>
           </a>
         </div>
         <nav class="header__nav-list-desktop">
           <ul class="header__nav-list">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="#quemsomos">Quem Somos</a></li>
-            <li class="dropdown">
-              <a
-                href="#"
-                class="dropdown-toggle"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Produtos <span class="arrow">&#9662;</span>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a href="produtos-novos.html">Novos</a></li>
-                <li><a href="produtos-usados.html">Usados</a></li>
-                <li><a href="produtos-acessorios.html">Acessórios</a></li>
-              </ul>
-            </li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="produtos-novos.html">Novos</a></li>
+            <li><a href="produtos-usados.html">Usados</a></li>
+            <li><a href="produtos-acessorios.html">Acessórios</a></li>
           </ul>
         </nav>
         <div class="header__icons header__icons--desktop">
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/mrluthieria/"
             target="_blank"
             aria-label="Instagram"
           >
-            <svg width="24" height="24" fill="currentColor">
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                stroke-width="2"
-                fill="none"
-              />
-              <rect
-                x="8"
-                y="8"
-                width="8"
-                height="8"
-                rx="2"
-                fill="currentColor"
-              />
-              <circle cx="16" cy="8" r="1" fill="#fff" />
-            </svg>
+            <img
+              src="assets/images/iconsinstagram.png"
+              alt="Instagram"
+              width="24"
+              height="24"
+            />
           </a>
-          <a href="https://wa.me/" target="_blank" aria-label="WhatsApp">
-            <svg width="24" height="24" fill="currentColor">
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                stroke-width="2"
-                fill="none"
-              />
-              <path
-                d="M8 12c1.5 2 4.5 2 6 0"
-                stroke="#fff"
-                stroke-width="2"
-                fill="none"
-              />
-            </svg>
+          <a
+            href="https://wa.me/11948473406"
+            target="_blank"
+            aria-label="WhatsApp"
+          >
+            <img
+              src="assets/images/iconwhatsapp.png"
+              alt="WhatsApp"
+              width="24"
+              height="24"
+            />
           </a>
         </div>
         <button class="header__menu-btn" id="menuBtn" aria-label="Abrir menu">
@@ -112,84 +80,294 @@
           </ul>
           <div class="header__icons header__icons--mobile">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/mrluthieria/"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
             >
-              <svg width="24" height="24" fill="currentColor">
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  fill="none"
-                />
-                <rect
-                  x="8"
-                  y="8"
-                  width="8"
-                  height="8"
-                  rx="2"
-                  fill="currentColor"
-                />
-                <circle cx="16" cy="8" r="1" fill="#fff" />
-              </svg>
+              <img
+                src="assets/images/iconsinstagram.png"
+                alt="Instagram"
+                width="24"
+                height="24"
+              />
             </a>
-            <a href="https://wa.me/" target="_blank" aria-label="WhatsApp">
-              <svg width="24" height="24" fill="currentColor">
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  fill="none"
-                />
-                <path
-                  d="M8 12c1.5 2 4.5 2 6 0"
-                  stroke="#fff"
-                  stroke-width="2"
-                  fill="none"
-                />
-              </svg>
+            <a
+              href="https://wa.me/11948473406"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <img
+                src="assets/images/iconwhatsapp.png"
+                alt="WhatsApp"
+                width="24"
+                height="24"
+              />
             </a>
           </div>
         </div>
       </div>
     </header>
     <main>
-      <section style="padding:4rem 1rem;text-align:center;">
-        <h1 style="font-family:'Bree Serif',serif;color:#e60000;">Usados</h1>
+      <section style="padding: 4rem 1rem; text-align: center">
+        <h1 style="font-family: 'Bree Serif', serif; color: #e60000">Usados</h1>
       </section>
       <section class="produtos-section">
         <div class="produto-card">
           <div class="produto-carousel">
-            <button class="carousel-produto-btn prev" aria-label="Anterior">&#10094;</button>
+            <button class="carousel-produto-btn prev" aria-label="Anterior">
+              &#10094;
+            </button>
             <div class="carousel-produto-track-wrapper">
               <div class="carousel-produto-track">
-                <img src="assets/images/produto1-1.jpg" alt="Foto 1 do Produto" class="produto-img" />
-                <img src="assets/images/produto1-2.jpg" alt="Foto 2 do Produto" class="produto-img" />
-                <img src="assets/images/produto1-3.jpg" alt="Foto 3 do Produto" class="produto-img" />
-                <img src="assets/images/produto1-4.jpg" alt="Foto 4 do Produto" class="produto-img" />
-                <img src="assets/images/produto1-5.jpg" alt="Foto 5 do Produto" class="produto-img" />
-                <img src="assets/images/produto1-6.jpg" alt="Foto 6 do Produto" class="produto-img" />
-                <img src="assets/images/produto1-7.jpg" alt="Foto 7 do Produto" class="produto-img" />
-                <img src="assets/images/produto1-8.jpg" alt="Foto 8 do Produto" class="produto-img" />
+                <img
+                  src="assets/images/cort-1.jpeg"
+                  alt="Foto 1 do Produto"
+                  class="produto-img"
+                />
+                <img
+                  src="assets/images/cort-2.jpeg"
+                  alt="Foto 2 do Produto"
+                  class="produto-img"
+                />
+                <img
+                  src="assets/images/cort-3.jpeg"
+                  alt="Foto 3 do Produto"
+                  class="produto-img"
+                />
+                <img
+                  src="assets/images/cort-4.jpeg"
+                  alt="Foto 4 do Produto"
+                  class="produto-img"
+                />
+                <img
+                  src="assets/images/cort-5.jpeg"
+                  alt="Foto 5 do Produto"
+                  class="produto-img"
+                />
+                <img
+                  src="assets/images/cort-6.jpeg"
+                  alt="Foto 6 do Produto"
+                  class="produto-img"
+                />
               </div>
             </div>
-            <button class="carousel-produto-btn next" aria-label="Próximo">&#10095;</button>
+            <button class="carousel-produto-btn next" aria-label="Próximo">
+              &#10095;
+            </button>
           </div>
           <div class="produto-info">
-            <h2 class="produto-nome">Fender Stratocaster American Standard 2014</h2>
-            <div class="produto-disponibilidade">Consultar disponibilidade</div>
-            <a href="https://wa.me/SEUNUMERO" target="_blank" class="btn-produto-cta">
+            <h2 class="produto-nome">
+              Guitarra Cort Viva Gold II 3 Viva Series Preto Fosco-Usada
+            </h2>
+            <div class="produto-precos">
+              <div class="font-bold text-lg text-red">R$ 2.000 à vista</div>
+              <div class="text-gray-700 text-base">ou 10x de R$ 232,00 sem juros</div>
+            </div>
+            <div class="produto-disponibilidade">Produto Indisponivél</div>
+            <a
+              href="https://wa.me/11948473406"
+              target="_blank"
+              class="btn-produto-cta"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="produto-card">
+          <div class="produto-carousel">
+            <button class="carousel-produto-btn prev" aria-label="Anterior">
+              &#10094;
+            </button>
+            <div class="carousel-produto-track-wrapper">
+              <div class="carousel-produto-track">
+                <img
+                  src="assets/images/roland1.jpeg"
+                  alt="Foto 1 do Produto"
+                  class="produto-img"
+                />
+                <img
+                  src="assets/images/roland2.jpeg"
+                  alt="Foto 2 do Produto"
+                  class="produto-img"
+                />
+                <img
+                  src="assets/images/roland3.jpeg"
+                  alt="Foto 3 do Produto"
+                  class="produto-img"
+                />
+                <img
+                  src="assets/images/roland4.jpeg"
+                  alt="Foto 4 do Produto"
+                  class="produto-img"
+                />
+                
+              </div>
+            </div>
+            <button class="carousel-produto-btn next" aria-label="Próximo">
+              &#10095;
+            </button>
+          </div>
+          <div class="produto-info">
+            <h2 class="produto-nome">
+              Amplificador Roland Cube 40XL
+            </h2>
+            <div class="produto-precos">
+              <div class="font-bold text-lg text-red">R$ 1.700 à vista</div>
+              <div class="text-gray-700 text-base">ou 10x de R$ 190,00 sem juros</div>
+            </div>
+            <div class="produto-disponibilidade">Produto Disponivél</div>
+            <a
+              href="https://wa.me/11948473406"
+              target="_blank"
+              class="btn-produto-cta"
+            >
               WhatsApp
             </a>
           </div>
         </div>
       </section>
     </main>
+    <div id="modal-produto-img" class="modal-produto-img">
+      <button class="modal-produto-arrow prev" aria-label="Anterior">
+        &#10094;
+      </button>
+      <img
+        class="modal-produto-img-content"
+        id="modalProdutoImgContent"
+        src=""
+        alt="Foto ampliada do produto"
+      />
+      <button class="modal-produto-arrow next" aria-label="Próximo">
+        &#10095;
+      </button>
+      <span class="modal-produto-close" id="modalProdutoClose">&times;</span>
+    </div>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__logo">
+          <a href="/index.html" style="text-decoration: none; color: inherit">
+            <span>MR</span>Luthieria
+          </a>
+        </div>
+        <nav class="footer__nav">
+          <a href="/index.html">Home</a>
+          <a href="#quemsomos">Quem Somos</a>
+          <a href="#servicos">Serviços</a>
+          <a href="produtos-novos.html">Produtos</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="regulagens.html">Regulagens</a>
+        </nav>
+        <div class="footer__social">
+          <a
+            href="https://www.instagram.com/mrluthieria/"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <img
+              src="assets/images/iconsinstagram.png"
+              alt="Instagram"
+              width="28"
+              height="28"
+            />
+          </a>
+          <a
+            href="https://wa.me/11948473406"
+            target="_blank"
+            aria-label="WhatsApp"
+          >
+            <img
+              src="assets/images/iconwhatsapp.png"
+              alt="WhatsApp"
+              width="28"
+              height="28"
+            />
+          </a>
+        </div>
+        <div
+          class="footer__info"
+          style="
+            text-align: center;
+            color: #fff;
+            font-size: 1.05rem;
+            margin-top: 0.7rem;
+          "
+        >
+          Rua Henrique Casela, 54-Apto 92 Torre 1 (Condomínio Dez Tiquatira).<br />
+          Jd América da Penha. São Paulo-SP<br />
+          Tel:
+          <a
+            href="https://wa.me/11948473406"
+            target="_blank"
+            aria-label="WhatsApp"
+            style="color: #fff; text-decoration: underline"
+            >11 94847-3406</a
+          >
+        </div>
+        <div class="footer__copy">
+          &copy; 2025 MRLuthieria. Todos os direitos reservados.
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/11948473406"
+      class="whatsapp-fixo"
+      target="_blank"
+      aria-label="Fale conosco no WhatsApp"
+    >
+      <img
+        src="assets/images/iconwhatsapp.png"
+        alt="WhatsApp"
+        width="56"
+        height="56"
+      />
+    </a>
     <script src="./assets/js/script.js"></script>
+    
   </body>
 </html>
+<style>
+  /* ...existing code... */
+  .modal-produto-arrow,
+  .carousel-produto-btn {
+    background: transparent;
+    border: none;
+    color: rgba(30, 30, 30, 0.18);
+    font-size: 2.2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    box-shadow: none;
+    outline: none;
+  }
+
+  .modal-produto-arrow:hover,
+  .carousel-produto-btn:hover {
+    color: rgba(30, 30, 30, 0.5);
+  }
+
+  .modal-produto-arrow:focus,
+  .carousel-produto-btn:focus {
+    outline: none;
+  }
+  .produto-precos {
+    width: 100%;
+    margin: 0.5rem 0 0.7rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .preco-avista {
+    color: #0a8a00;
+    font-size: 1.18rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+  .preco-parcelado {
+    color: #444;
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+</style>
