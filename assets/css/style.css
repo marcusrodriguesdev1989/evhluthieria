@@ -1346,3 +1346,28 @@ section.servicos {
         font-size: 1.3rem;
       }
     }
+
+.localizacao-section {
+  padding: 3rem 1rem;
+  background: #faf9f9;
+  text-align: center;
+}
+.localizacao-title {
+  font-size: 2rem;
+  color: #e60000;
+  margin-bottom: 1.5rem;
+  font-family: "Bree Serif", serif;
+}
+.localizacao-mapa {
+  max-width: 700px;
+  margin: 3rem auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px #0002;
+}
+.localizacao-mapa iframe {
+  width: 100%;
+  min-height: 320px;
+  border: none;
+  display: block;
+}
