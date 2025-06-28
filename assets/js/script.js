@@ -107,8 +107,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById('modal-produto-img');
   const modalImg = document.getElementById('modalProdutoImgContent');
   const modalClose = document.getElementById('modalProdutoClose');
-  const modalPrev = modal.querySelector('.modal-produto-arrow.prev');
-  const modalNext = modal.querySelector('.modal-produto-arrow.next');
+  const modalPrev = modal ? modal.querySelector('.modal-produto-arrow.prev') : null;
+  const modalNext = modal ? modal.querySelector('.modal-produto-arrow.next') : null;
 
   let modalImages = [];
   let modalIndex = 0;
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.addEventListener("keydown", function (e) {
-    if (!modal.classList.contains("open")) return;
+    if (!modal || !modal.classList.contains("open")) return;
     if (e.key === "Escape") {
       modal.classList.remove('open');
       modalImg.src = '';
@@ -194,5 +194,56 @@ document.addEventListener("DOMContentLoaded", function () {
     window.fecharModal = function() {
       modalCadastro.classList.remove('open');
     }
+  }
+  
+  // Banner base slider automático
+  const slider = document.getElementById('bannerSlider');
+  if (slider) {
+    const slides = slider.querySelectorAll('.banner-slide');
+    const dotsContainer = slider.querySelector('.banner-dots');
+    let currentSlide = 0;
+    let intervalId;
+
+    // Cria os dots
+    dotsContainer.innerHTML = '';
+    slides.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.className = 'banner-dot' + (idx === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `Ir para o slide ${idx + 1}`);
+      dot.addEventListener('click', () => goToSlide(idx));
+      dotsContainer.appendChild(dot);
+    });
+    const dots = dotsContainer.querySelectorAll('.banner-dot');
+
+    function showSlide(idx) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === idx);
+        slide.style.transform = i === idx ? 'translateX(0)' : (i < idx ? 'translateX(-100%)' : 'translateX(100%)');
+        slide.style.opacity = i === idx ? '1' : '0';
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === idx);
+      });
+      currentSlide = idx;
+    }
+
+    function goToSlide(idx) {
+      showSlide(idx);
+      resetInterval();
+    }
+
+    function nextSlide() {
+      let next = (currentSlide + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function resetInterval() {
+      clearInterval(intervalId);
+      intervalId = setInterval(nextSlide, 7000);
+    }
+
+    // Inicializa slides e dots
+    showSlide(0);
+    intervalId = setInterval(nextSlide, 7000);
   }
 });
