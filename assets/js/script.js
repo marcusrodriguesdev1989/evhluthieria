@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function resetInterval() {
       clearInterval(intervalId);
-      intervalId = setInterval(nextSlide, 7000);
+      intervalId = setInterval(nextSlide, 5000);
     }
 
     // Inicializa slides e dots

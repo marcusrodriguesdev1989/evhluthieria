@@ -1231,7 +1231,7 @@ section.servicos {
   position: relative;
   background: url('/assets/images/stripes-bg.jpg') center center/cover no-repeat;
   color: #fff;
-  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  padding: 3.6rem 1.5rem 3.6rem 1.5rem;
   text-align: center;
 }
 .banner-topo::before {
@@ -1262,7 +1262,7 @@ section.servicos {
   position: relative;
   background: url('/assets/images/guitar-evh.png') center center/contain no-repeat;
   color: #222;
-  min-height: 260px;
+  max-height: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1274,7 +1274,7 @@ section.servicos {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.78);
+  background: #ffffff);
   z-index: 0;
 }
 .banner-base > * {
@@ -1283,8 +1283,8 @@ section.servicos {
 }
 
 .banner-chamada {
-  font-size: 1.15rem;
-  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
   color: #222;
 }
 
@@ -1307,15 +1307,44 @@ section.servicos {
 
 @media (max-width: 700px) {
   .banner-dividido {
-    min-height: 220px;
+    min-height: 578px;
   }
-  .banner-topo, .banner-base {
-    padding: 1.2rem 0.7rem;
+  .banner-topo {
+    min-height: 326px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
-  .banner-titulo {
-    font-size: 1.4rem;
+  .banner-base-carousel {
+    min-height: 170px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
-  .banner-chamada {
+  .banner-base.banner-slide {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1.5rem; /* só aqui! */
+  }
+  .banner-titulo-base,
+  .banner-titulo-promo {
+    margin-bottom: 0.4rem;
+    font-size: 1.1rem;
+  }
+  .banner-chamada,
+  .banner-chamada-promo {
+    margin-bottom: 0.3rem;
+    font-size: 0.98rem;
+  }
+  .banner-cta {
+    margin-top: 1rem;
+    padding: 0.7rem 1.8rem;
     font-size: 1rem;
   }
 }
@@ -1358,21 +1387,19 @@ section.servicos {
   transform: scale(1.04);
 }
 @media (max-width: 700px) {
-  .cadastro-container {
-    padding: 1.2rem 0.5rem 1rem 0.5rem;
-    margin: 1.2rem 0;
-  }
-  .cadastro-container h2 {
-    font-size: 1.3rem;
-  }
-}
-
-.localizacao-section {
-  padding: 3rem 1rem;
   background: #faf9f9;
   text-align: center;
 }
+
+.localizacao-section p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .localizacao-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 2rem;
   color: #e60000;
   margin-bottom: 1.5rem;
@@ -1425,7 +1452,7 @@ section.servicos {
 .banner-base-carousel {
   position: relative;
   width: 100%;
-  min-height: 260px;
+  min-height: 170px;
   overflow: hidden;
 }
 .banner-base.banner-slide {
@@ -1452,7 +1479,7 @@ section.servicos {
   pointer-events: auto;
 }
 .banner-base-black {
-  background: #111 !important;
+  background: #ffffff !important;
   color: #fff;
 }
 .banner-base-black .banner-titulo,
@@ -1463,7 +1490,7 @@ section.servicos {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 18px;
+  bottom: 3px;
   z-index: 10;
   display: flex;
   justify-content: center;
@@ -1487,18 +1514,48 @@ section.servicos {
   transform: scale(1.18);
 }
 @media (max-width: 700px) {
-  .banner-base.banner-slide {
-    padding: 1.2rem 0.7rem;
-    min-height: 180px;
+  .banner-dots {
+    display: none !important;
   }
-}
-
-.banner-titulo-promo{
-  color: #000000;
-  font-size: 3rem;
-}
-
-.banner-chamada-promo{
-  color: #000000;
-  margin-bottom: 1.5rem;
+  .banner-dividido {
+    min-height: 578px;
+  }
+  .banner-topo {
+    min-height: 326px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .banner-base-carousel {
+    min-height: 186px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .banner-base.banner-slide {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1.5rem; /* só aqui! */
+  }
+  .banner-titulo-base,
+  .banner-titulo-promo {
+    margin-bottom: 0.4rem;
+    font-size: 1.1rem;
+  }
+  .banner-chamada,
+  .banner-chamada-promo {
+    margin-bottom: 0.3rem;
+    font-size: 0.98rem;
+  }
+  .banner-cta {
+    margin-top: 1rem;
+    padding: 0.7rem 1.8rem;
+    font-size: 1rem;
+  }
 }
